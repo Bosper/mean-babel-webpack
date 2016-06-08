@@ -9,10 +9,11 @@ app.all( '/*', function ( req, res ) {
   <html>\
     <head>\
       <title>MEAN APP</title>\
+      <base href="/"></base>\
     </head>\
     <body>\
-      <h1>Hello, this is app.</h1>\
-      <h2>Live reloading...</h2>\
+      <div ui-view></div>\
+      <h1>Hello from server.</h1>\
       <script src="bundle.js"></script>\
     </body>\
   </html>\
