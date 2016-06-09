@@ -1,4 +1,33 @@
-<div>
-  <a ui-sref="about" class="nav-link">ABOUT</a>
-  <h2>Hello from todos!</h2>
+<div class="container">
+    <a ui-sref="about" class="nav-link">ABOUT</a>
+    <h2>Hello from todos!</h2>
+    <form>
+        <input class="form-control todos__create-input" placeholder="What I need to do?" />
+        <button class="btn btn-success todos__create-button">Create Task</button>
+    </form>
+    <table class="table table-striped">
+        <tr>
+            <th>Completed</th>
+            <th>Task</th>
+            <th>Action</th>
+        </tr>
+        <!--<tr>-->
+            <!--<td>Yes</td>-->
+            <!--<td>Walk outside</td>-->
+            <!--<td>Edit, Delete</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>Yes</td>-->
+            <!--<td>Cut the tree</td>-->
+            <!--<td>Edit, Delete</td>-->
+        <!--</tr>-->
+        <tr ng-repeat="todo in todos">
+            <td><input type="checkbox" class="todos__checkbox" /></td>
+            <td><span class="todo__task">{{ todo.task }}</span></td>
+            <td>
+                <button class="btn btn-info">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
 </div>
